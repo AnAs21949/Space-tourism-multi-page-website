@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=League+Spartan:wght@500;600;700&family=Manrope:wght@600;800&family=Poppins:ital,wght@0,500;0,600;1,500&family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@0;1&family=Bellefair&family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=League+Spartan:wght@500;600;700&family=Manrope:wght@600;800&family=Poppins:ital,wght@0,500;0,600;1,500&family=Roboto:wght@100;300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button{
+  cursor: pointer;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 0.875rem;
+  font-family: Barlow Condensed;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+h2,
+h3,
+h4 {
+    line-height: 1;
+  }
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 0%);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gray {
+  color: #D0D6F9;
+  letter-spacing: 0.15rem;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  z-index: -99;
+  width: 100%;
+}
+
+main {
+  margin-top: 2rem;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Barlow Condensed";
+}
+main .hero .role {
+  font-family: "Barlow Condensed";
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+main .hero .member-name {
+  font-size: 1.2rem;
+  font-family: " Bellefair";
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding-bottom: 0.5rem;
+  font-weight: 100;
+}
+main .hero .motivation {
+  color: #D0D6F9;
+  padding: 0 3rem;
+  max-width: 63ch;
+}
+main .top-main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+main .top-main .img2 {
+  display: none;
+}
+main .top-main .info {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+main .top-main .info li button {
+  border: white 0.5px solid;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 2rem;
+  color: #fff;
+  font-family: "Bellefair";
+}
+main .top-main .info li button:hover {
+  background-color: #fff;
+  color: #333;
+}
+main .top-main img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .top-main .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed";
+  letter-spacing: 0.1rem;
+}
+main .top-main .title span {
+  padding-right: 0.5rem;
+  color: gray;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+header nav {
+  z-index: 1;
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .nav-btn .close {
+  top: 2rem;
+  position: absolute;
+  right: 1.5rem;
+  display: none;
+  width: 19.09px;
+  height: 19.09px;
+  z-index: 23;
+}
+header nav .nav-btn .open {
+  position: absolute;
+  top: 2rem;
+  right: 1.5rem;
+  width: 24px;
+  height: 21px;
+  z-index: 23;
+}
+header nav .show-links {
+  transform: translateX(0%) !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+header nav .links {
+  z-index: 23;
+  position: fixed;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  background: hsla(0deg, 0%, 0%, 0.5);
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 70%;
+  padding-top: 6rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+header nav .links li {
+  font-size: 1.2rem;
+  position: relative;
+}
+header nav .links li:hover::after {
+  display: none;
+  content: "";
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: -80%;
+  border: 2px solid rgba(225, 225, 225, 0.2);
+}
+header nav .links li span {
+  padding-right: 0.5rem;
+  font-weight: bold;
+}
+header nav .links li a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .image1 {
+    display: none;
+  }
+  .image2 {
+    display: block !important;
+  }
+  .image3 {
+    display: none;
+  }
+  .member-name {
+    font-size: 2rem !important;
+    padding: 0.5rem;
+  }
+  button {
+    width: 3rem !important;
+    font-size: 1.1rem;
+  }
+  .title {
+    align-self: flex-start;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+@supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
+  .links {
+    background: hsla(0deg, 0%, 100%, 0.1);
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
+  }
+}
+@media (min-width: 600px) {
+  li:hover::after {
+    display: block !important;
+  }
+  .motivation {
+    margin: 0 auto;
+  }
+  header nav {
+    padding: 0 !important;
+  }
+  header nav .logo {
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  header .nav-btn {
+    display: none !important;
+  }
+  header .links {
+    position: static !important;
+    flex-direction: row !important;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    transform: translateX(0) !important;
+    padding: 2rem 1.9rem !important;
+  }
+  header .links a {
+    padding: 0 0.8rem;
+  }
+  header .links span {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  .image1 {
+    display: none;
+  }
+  .image2 {
+    display: none;
+  }
+  .image3 {
+    display: block !important;
+  }
+  .info {
+    flex-direction: column;
+    gap: 1.4rem !important;
+  }
+  .hero {
+    padding: 0 !important;
+    margin-left: 12rem !important;
+  }
+  nav {
+    margin-top: 2rem;
+  }
+  nav .links {
+    padding: 1.5rem 10rem 1.5rem 5rem !important;
+  }
+  nav .links li {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  nav .links li:nth-of-type(4) a {
+    position: relative;
+  }
+  nav .links li:nth-of-type(4) a::after {
+    content: "";
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    bottom: -1.5rem;
+    border: 2px solid #fff;
+  }
+  nav .links li span {
+    display: inline !important;
+  }
+}
+@media (min-width: 1300px) {
+  .img1 {
+    display: none !important;
+  }
+  .img2 {
+    display: block !important;
+    margin-bottom: 4rem;
+  }
+  main {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: left;
+    gap: 10rem;
+  }
+  .top-main {
+    margin-top: 3rem !important;
+    position: relative;
+  }
+  .top-main .title {
+    position: absolute;
+    top: -4rem;
+    left: -46rem;
+    font-size: 1.3rem;
+  }
+  .top-main .member-img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 2rem !important;
+  }
+  .top-main .info {
+    position: absolute;
+    left: -45rem;
+    bottom: 14.5rem;
+  }
+  .hero {
+    align-items: flex-start !important;
+    margin-left: 6rem;
+    margin-top: 10rem !important;
+    text-align: left !important;
+  }
+  .hero .role {
+    font-size: 1.3rem !important;
+  }
+  .hero .member-name {
+    font-size: 2.5rem !important;
+    padding: 0.5rem 0 !important;
+  }
+  .hero .motivation {
+    padding: 0 !important;
+    max-width: 60ch;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    margin: 0 !important;
+  }
+}/*# sourceMappingURL=technology.css.map */
