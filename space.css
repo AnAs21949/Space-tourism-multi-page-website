@@ -8,7 +8,7 @@
   margin: 0;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -62,9 +62,9 @@ h4 {
     font-size: 1rem;
   }
   h1,
-h2,
-h3,
-h4 {
+  h2,
+  h3,
+  h4 {
     line-height: 1;
   }
 }
@@ -84,7 +84,7 @@ button {
 
 img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .image {
@@ -175,11 +175,13 @@ header nav .links li a {
   display: none !important;
 }
 
-@supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
+@supports (
+  (-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))
+) {
   .links {
     background: hsla(0deg, 0%, 100%, 0.1);
     -webkit-backdrop-filter: blur(1rem);
-            backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
   }
 }
 main {
@@ -236,7 +238,7 @@ main .main-text {
 main .main-text .title {
   text-align: center;
   font-size: 1.3rem;
-  color: #D0D6F9;
+  color: #d0d6f9;
   font-family: "Barlow Condensed";
 }
 main .main-text .heading {
@@ -247,7 +249,7 @@ main .main-text .heading {
 main .main-text .motivation {
   padding: 0 2.8rem;
   font-family: Barlow;
-  color: #D0D6F9;
+  color: #d0d6f9;
   text-align: center;
 }
 
@@ -339,4 +341,4 @@ main .main-text .motivation {
   .image3 {
     display: block !important;
   }
-}/*# sourceMappingURL=space.css.map */
+} /*# sourceMappingURL=space.css.map */
