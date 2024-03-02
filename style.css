@@ -145,9 +145,10 @@ header nav .links li:nth-of-type(1) a::after {
   content: "";
   position: absolute;
   width: 90%;
-  left: 5%;
-  bottom: -1.5rem;
+  left: 0%;
+  bottom: -0.5rem;
   border: 2px solid #fff;
+  width: 100%;
 }
 header nav .links li:hover::after {
   display: none;
